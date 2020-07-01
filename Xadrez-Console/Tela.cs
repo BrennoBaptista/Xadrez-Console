@@ -1,6 +1,7 @@
 ﻿using System;
+using Xadrez_Console.tabuleiro;
 
-namespace tabuleiro
+namespace Xadrez_Console
 {
     public class Tela
     {
@@ -10,13 +11,13 @@ namespace tabuleiro
             {
                 for (int c = 0; c < tab.Colunas; c++)
                 {
-                    if(tab.RetornaPeca(l, c) == null)
+                    if(tab.RetornarPeca(l, c) == null)
                     {
                         Console.Write("- ");
                     }
                     else
                     {
-                        Console.Write(tab.RetornaPeca(l, c) + " ");
+                        Console.Write(tab.RetornarPeca(l, c) + " ");
                     }
                 }
                 Console.WriteLine();
