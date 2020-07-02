@@ -2,15 +2,15 @@
 
 namespace Xadrez_Console.xadrez
 {
-    public class Rei : Peca
+    public class Bispo : Peca
     {
-        public Rei(Cor cor, Tabuleiro tabuleiro) :base(cor, tabuleiro)
+        public Bispo(Cor cor, Tabuleiro tabuleiro) : base(cor, tabuleiro)
         {
         }
 
         public override string ToString()
         {
-            return "K";
+            return "B";
         }
     }
 }

@@ -19,5 +19,10 @@
             QtdMovimentos = 0;
             Tabuleiro = tabuleiro;
         }
+
+        public void IncrementarMovimentos()
+        {
+            QtdMovimentos++;
+        }
     }
 }
