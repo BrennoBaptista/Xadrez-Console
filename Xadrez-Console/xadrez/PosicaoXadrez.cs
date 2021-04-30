@@ -7,10 +7,7 @@ namespace Xadrez_Console.xadrez
         public char Coluna { get; set; }
         public int Linha { get; set; }
 
-        public PosicaoXadrez()
-        {
-
-        }
+        //public PosicaoXadrez(){}
 
         public PosicaoXadrez(char coluna, int linha)
         {
