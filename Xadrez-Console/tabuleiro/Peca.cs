@@ -8,9 +8,7 @@
         public Tabuleiro Tabuleiro { get; protected set; }
 
         public Peca()
-        {
-
-        }
+        { }
 
         public Peca(Cor cor, Tabuleiro tabuleiro)
         {
@@ -19,7 +17,6 @@
             QtdMovimentos = 0;
             Tabuleiro = tabuleiro;
         }
-
 
         public bool ExisteMovimentosPossiveis()
         {
@@ -42,6 +39,11 @@
         public void IncrementarMovimentos()
         {
             QtdMovimentos++;
+        }
+
+        public bool ValidarMovimento(Posicao posicao)
+        {
+            return MovimentosPossiveis()[posicao.Linha, posicao.Coluna];
         }
     }
 }
