@@ -21,9 +21,14 @@ namespace Xadrez_Console.xadrez
 
             //acima
             posicao.DefinirValores(Posicao.Linha - 1, Posicao.Coluna);
-            if (Tabuleiro.ValidarPosicao(Posicao) && ValidarMovimento(Posicao))
+            while (Tabuleiro.ValidarPosicao(posicao) && ValidarMovimento(posicao))
             {
-                matriz[Posicao.Linha, Posicao.Coluna] = true;
+                matriz[posicao.Linha, posicao.Coluna] = true;
+                if (Tabuleiro.RetornarPeca(posicao) != null && Tabuleiro.RetornarPeca(posicao).Cor != Cor)
+                {
+                    break;
+                }
+                posicao.Linha--; //= posicao.Linha - 1;
             }
 
             return matriz;
